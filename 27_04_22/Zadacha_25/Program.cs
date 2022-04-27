@@ -14,4 +14,4 @@ for (int i = 2; i <= Stepen; i++)
 {
     result *=x;
 }
-System.Console.WriteLine($"{x} в степени {Stepen} = {result}");
+System.Console.WriteLine($"{x} в {Stepen} степени = {result}");

@@ -12,4 +12,4 @@ double Stepen = Convert.ToInt32(Console.ReadLine());
 
 Console.Clear();
 double result = Math.Pow(x, Stepen);
-System.Console.WriteLine($"{x} в степени {Stepen} = {result}");
+System.Console.WriteLine($"{x} в {Stepen} степени = {result}");
