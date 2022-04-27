@@ -3,7 +3,6 @@
 // 2, 4 -> 16
 
 Console.Clear();
-
 System.Console.WriteLine("Введите число ");
 int x = Convert.ToInt32(Console.ReadLine());
 int result = x;
