@@ -25,7 +25,7 @@ System.Console.Write("Введите b2 ");
 buf = Console.ReadLine();
 double b2 = float.Parse(buf);
 
-double x = (b1 - b2) / (k1 - k2) * -1;
+double x = (b1 - b2) / (k2 - k1);
 double y = k1 * x + b1;
 
 Console.Clear();
