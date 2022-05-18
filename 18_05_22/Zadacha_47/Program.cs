@@ -1,4 +1,4 @@
-﻿// Задача 47: Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+﻿// Задача 47: Задайте двумерный массив размером m × n, заполненный случайными вещественными числами.
 // m = 3, n = 4.
 // 0,5 7 -2 -0,2
 // 1 -3,3 8 -9,9
@@ -15,9 +15,9 @@ int y = Convert.ToInt32(b);
 
 double[,] a = new double[x, y];
 Random random = new Random();
-for (int i = 0; i < 3; i++)
+for (int i = 0; i < a.GetLength(0); i++)
 {
-    for (int j = 0; j < 4; j++)
+    for (int j = 0; j <a.GetLength(1); j++)
     {
         a[i, j] = random.NextDouble()*(5-(-5))-5; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
                                                   //https://stackoverflow.com/questions/1064901/random-number-between-2-double-numbers
