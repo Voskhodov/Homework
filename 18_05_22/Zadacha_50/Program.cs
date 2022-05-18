@@ -6,6 +6,30 @@
 
 // 1 7 -> такого числа в массиве нет
 
+void FillArray(int[,] array, int minValue, int maxValue)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(minValue, maxValue);
+        }
+    }
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            System.Console.Write($"{array[i, j],4}");
+        }
+        System.Console.WriteLine();
+    }
+    System.Console.WriteLine();
+}
+
 Console.Clear();
 Console.Write("Введите координату по X ");
 string d = Console.ReadLine();
@@ -15,15 +39,11 @@ Console.Write("Введите координату по Y ");
 string b = Console.ReadLine();
 int y = Convert.ToInt32(b);
 
-double[,] a = new double[5, 10];
-Random random = new Random();
-for (int i = 0; i < 3; i++)
+int[,] Array = new int[4, 6];
+FillArray(Array, -10, 10);
+PrintArray(Array);
+if (x < 4 || y < 6)
 {
-    for (int j = 0; j < 4; j++)
-    {
-        a[i, j] = random.NextDouble()*(5-(-5))-5; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
-                                                  //https://stackoverflow.com/questions/1064901/random-number-between-2-double-numbers
-        Console.Write("{0,6:F2}", a[i, j]);
-    }
-    Console.WriteLine();
+    System.Console.WriteLine(Array[x, y]);
 }
+System.Console.WriteLine("такого числа в массиве нет");
