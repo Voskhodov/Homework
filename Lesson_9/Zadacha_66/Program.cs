@@ -3,20 +3,21 @@
 // M = 4; N = 8. -> 30
 
 Console.Clear();
-Console.Write("Введите число m: ");
+Console.Write("Введите число min: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int d = 0;
+Console.Write("Введите число max: ");
+int m = Convert.ToInt32(Console.ReadLine());
+int x = 0;
 
-void PrintSumNums(int max)
+void PrintSumNums(int min, int max)
 {
-    if (max < 0) max = max * -1;
-    if (max > 0)
+    if (min != max)
     {
-        d = d + max % 10;
-        max = max / 10;
-        PrintSumNums(max);
+        x = x + min;
+        min++;
+        PrintSumNums(min, max);
     }
 }
 PrintSumNums(n, m);
 
-Console.WriteLine($"Сумма чисел ровна {x}");
+Console.WriteLine($"Сумма чисел от {n} до {m} ровна {x + m}");
