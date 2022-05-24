@@ -3,7 +3,7 @@
 // 45 -> 9
 
 Console.Clear();
-Console.Write("Введите число m: ");
+Console.Write("Введите число n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int x = 0;
 
@@ -16,8 +16,6 @@ void PrintSumNums(int max)
         max = max / 10;
         PrintSumNums(max);
     }
-
-
 }
 PrintSumNums(n);
 
